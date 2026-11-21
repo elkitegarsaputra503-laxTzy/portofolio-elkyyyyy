@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-signature: "Cormorant Garamond", Georgia, serif;
+
+  --color-bg-base: #0d0c0a;
+  --color-bg-card: #151310;
+  --color-bg-card-hover: #1d1a15;
+  --color-surface: #141311;
+  --color-surface-lowest: #0f0e0c;
+  --color-surface-low: #1d1b19;
+  --color-surface-container: #211f1d;
+
+  --color-text-main: #f4efe6;
+  --color-text-muted: #9a9284;
+  --color-on-surface-variant: #d1c5b5;
+
+  --color-gold-primary: #c5a065;
+  --color-gold-light: #e8d5b7;
+  --color-gold-glow: rgba(197, 160, 101, 0.18);
+
+  --color-border-subtle: rgba(197, 160, 101, 0.25);
+  --color-border-faint: rgba(244, 239, 230, 0.08);
+}
+
+@layer base {
+  html {
+    background-color: #0d0c0a;
+    color: #f4efe6;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d0c0a;
+    background-image: radial-gradient(
+      circle at 50% 0%,
+      rgba(197, 160, 101, 0.08),
+      transparent 70%
+    );
+    background-repeat: no-repeat;
+    overscroll-behavior: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.font-display-anton {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-signature-serif {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.hairline-gold {
+  border-color: rgba(197, 160, 101, 0.25);
+}
+
+.hairline-faint {
+  border-color: rgba(244, 239, 230, 0.08);
+}
