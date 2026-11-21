@@ -1,0 +1,1 @@
+Portofolio Elky sang exekutor
